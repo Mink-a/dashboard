@@ -90,20 +90,6 @@ function TableBody() {
                   <BsThreeDotsVertical />
                 </span>
               </td>
-              {/* <td className="flex items-center py-4 px-6 space-x-3">
-                <a
-                  href="#"
-                  className="font-medium text-[#54BAB9] dark:text-[#54BAB9] hover:underline"
-                >
-                  Edit
-                </a>
-                <a
-                  href="#"
-                  className="font-medium text-red-600 dark:text-red-500 hover:underline"
-                >
-                  Remove
-                </a>
-              </td> */}
             </tr>
           </tbody>
         </table>

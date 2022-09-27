@@ -1,7 +1,11 @@
 import React from "react";
 import { BsSearch, BsPlusLg } from "react-icons/bs";
+import { useState } from "react";
+import Modal from "./Modal";
 
 function ReportTitle() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <div className="p-4 font-[Poppins] text-sm bg-white">
@@ -23,7 +27,11 @@ function ReportTitle() {
             </label>
           </div>
           <div className="w-2/12">
-            <button className="py-2 px-4 rounded-2xl inline-flex items-center gap-4 justify-center bg-[#54BAB9] w-full text-white">
+            <button
+              className="py-2 px-4 rounded-2xl inline-flex items-center gap-4 justify-center bg-[#54BAB9] w-full text-white"
+              type="button"
+              onClick={() => setShowModal(true)}
+            >
               <BsPlusLg />
               <span>Add New Patient</span>
             </button>
@@ -97,6 +105,8 @@ function ReportTitle() {
           </div>
         </div>
       </div>
+      {/* Modal Part */}
+      {showModal && <Modal setOpenModal={setShowModal} />}
     </div>
   );
 }
