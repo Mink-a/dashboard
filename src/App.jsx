@@ -1,5 +1,8 @@
 function App() {
-  return <div className="App">Hello World!</div>;
+  return (
+    <div className="font-bold underline">helo World
+    </div>
+  );
 }
 
 export default App;
