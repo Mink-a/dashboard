@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ReportTitle from "./ReportTitle";
 
 function Table() {
   return (
-    <div>Table</div>
-  )
+    <div className="m-4 ">
+      <ReportTitle />
+    </div>
+  );
 }
 
-export default Table
+export default Table;

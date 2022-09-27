@@ -3,7 +3,7 @@ import Table from "./components/Table";
 
 function App() {
   return (
-    <div>
+    <div className="bg-red-100">
       <Header />
       <Table />
     </div>
