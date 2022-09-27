@@ -1,11 +1,12 @@
 import React from "react";
 import { TiWarning } from "react-icons/ti";
-import { BsThreeDotsVertical } from "react-icons/bs";
+
+import Dropdown from "./Dropdown";
 
 function TableBody() {
   return (
     <div className="">
-      <div className="overflow-x-auto relative">
+      <div className="relative">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-[#54BAB9] uppercase border-y-2 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -86,9 +87,7 @@ function TableBody() {
                 တိုက်(၅)၊ အခန်း(၀၀၁)၊ လှိုင်သီရိအိမ်ရာ, Hlaing, Yangon
               </td>
               <td className="py-4 px-6">
-                <span className="text-indigo-500 cursor-pointer">
-                  <BsThreeDotsVertical />
-                </span>
+                <Dropdown />
               </td>
             </tr>
           </tbody>
