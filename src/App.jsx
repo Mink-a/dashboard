@@ -1,6 +1,11 @@
+import Header from "./components/Header";
+import Table from "./components/Table";
+
 function App() {
   return (
-    <div className="font-bold underline">helo World
+    <div>
+      <Header />
+      <Table />
     </div>
   );
 }
