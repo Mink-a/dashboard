@@ -76,6 +76,7 @@ function ReportTitle() {
               <div className="whitespace-nowrap text-sm">Rows per pages: </div>
               <select
                 className="
+                text-[#54BAB9]
               text-center
                     block
                     mt-1

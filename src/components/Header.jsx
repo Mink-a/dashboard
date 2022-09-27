@@ -5,7 +5,7 @@ import { FaBell } from "react-icons/fa";
 
 function Header() {
   return (
-    <div className="bg-[#54BAB9] flex items-center justify-end gap-10 px-4 py-2 text-white">
+    <div className="bg-[#54BAB9] flex items-center justify-end gap-10 px-12 py-2 text-white">
       <img className="mr-auto" src={Logo} alt="logo" width={48} />
       <FaBell className="text-2xl" />
       <div className="flex gap-5">
