@@ -68,9 +68,11 @@ function Form({
         </div>
         <div class="text-center text-base rounded-t p-4 dark:border-gray-600">
           <h3 class="text-xl font-[500] mb-2 text-[#54BAB9] dark:text-white">
-            Add new patient
+            {isCreate ? "Add new" : "Update"} patient
           </h3>
-          <p className="text-[#444444]">Enter new patient imformation below</p>
+          <p className="text-[#444444]">
+            Enter {isCreate ? "new" : "update"} patient imformation below
+          </p>
         </div>
 
         <div class="space-y-6 p-6 w-full">
