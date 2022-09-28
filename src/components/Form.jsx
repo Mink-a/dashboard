@@ -10,15 +10,12 @@ function Form({
   setIsDropOpen,
 }) {
   return (
-    <div>
+    <div className="py-6 px-7">
       <form
         action="#"
-        class="relative rounded-lg bg-white shadow dark:bg-gray-700"
+        class="relative w-full rounded-lg bg-white dark:bg-gray-700"
       >
-        <div class="flex items-start justify-between rounded-t p-4 dark:border-gray-600">
-          <h3 class="text-xl font-semibold  text-indigo-500 dark:text-white">
-            Add new patient
-          </h3>
+        <div className="absolute top-1 right-6">
           {isEdit && (
             <button
               onClick={() => {
@@ -69,12 +66,18 @@ function Form({
             </button>
           )}
         </div>
+        <div class="text-center text-base rounded-t p-4 dark:border-gray-600">
+          <h3 class="text-xl font-[500] mb-2 text-[#54BAB9] dark:text-white">
+            Add new patient
+          </h3>
+          <p className="text-[#444444]">Enter new patient imformation below</p>
+        </div>
 
-        <div class="space-y-6 p-6">
-          <div class="grid grid-cols-6 gap-6">
+        <div class="space-y-6 p-6 w-full">
+          <div class="grid grid-cols-6 w-full gap-6">
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">Full name</span>
+                <span class="text-[#444444]">Pet name</span>
                 <input
                   type="text"
                   class="
@@ -82,9 +85,9 @@ function Form({
                     block
                     w-full
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#47afad] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                   placeholder=""
                 />
@@ -92,19 +95,19 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">What type of event is it?</span>
+                <span class="text-[#444444]">Status</span>
                 <select
                   class="
                     block
                     w-full
                     mt-1
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                 >
-                  <option>Corporate event</option>
+                  <option>Please choose status</option>
                   <option>Wedding</option>
                   <option>Birthday</option>
                   <option>Other</option>
@@ -113,7 +116,7 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">Full name</span>
+                <span class="text-[#444444]">Pawrent</span>
                 <input
                   type="text"
                   class="
@@ -121,9 +124,9 @@ function Form({
                     block
                     w-full
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                   placeholder=""
                 />
@@ -131,19 +134,19 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">What type of event is it?</span>
+                <span class="text-[#444444]">Breed</span>
                 <select
                   class="
                     block
                     w-full
                     mt-1
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                 >
-                  <option>Corporate event</option>
+                  <option>Please choose status</option>
                   <option>Wedding</option>
                   <option>Birthday</option>
                   <option>Other</option>
@@ -152,18 +155,18 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700 block">Full name</span>
-                <div className="flex gap-5 mt-3 text-base px-1">
+                <span class="text-[#444444] block">Gender</span>
+                <div className="flex gap-5 mt-3 text-base p-1">
                   <div className="">
-                    <input type="radio" name="radio" id="male" class="" />
+                    <input type="radio" name="sex" id="male" class="" />
                     <label for="male" class="ml-3">
-                      Radio Two
+                      Male
                     </label>
                   </div>
                   <div className="">
-                    <input type="radio" name="radio" id="female" class="" />
+                    <input type="radio" name="sex" id="female" class="" />
                     <label for="female" class="ml-3">
-                      Radio Two
+                      Female
                     </label>
                   </div>
                 </div>
@@ -171,7 +174,7 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">When is your event?</span>
+                <span class="text-[#444444]">Date of Birth</span>
                 <input
                   type="date"
                   class="
@@ -179,16 +182,16 @@ function Form({
                     block
                     w-full
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                 />
               </label>
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">Full name</span>
+                <span class="text-[#444444]">Contact Phone No.</span>
                 <input
                   type="text"
                   class="
@@ -196,9 +199,9 @@ function Form({
                     block
                     w-full
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                   placeholder=""
                 />
@@ -206,16 +209,16 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">Additional details</span>
+                <span class="text-[#444444]">Address</span>
                 <textarea
                   class="
                     mt-1
                     block
                     w-full
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                   rows="3"
                 ></textarea>
@@ -223,19 +226,19 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">What type of event is it?</span>
+                <span class="text-[#444444]">City</span>
                 <select
                   class="
                     block
                     w-full
                     mt-1
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                 >
-                  <option>Corporate event</option>
+                  <option>Please choose city</option>
                   <option>Wedding</option>
                   <option>Birthday</option>
                   <option>Other</option>
@@ -244,18 +247,19 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-gray-700">What type of event is it?</span>
+                <span class="text-[#444444]">Township</span>
                 <select
                   class="
                     block
                     w-full
                     mt-1
                     rounded-md
-                    border-gray-300
+                    border-[#54BAB9]
                     shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    focus:border-[#54BAB9] focus:ring focus:ring-indigo-200 focus:ring-opacity-50
                   "
                 >
+                  <option>Please choose township</option>
                   <option>Corporate event</option>
                   <option>Wedding</option>
                   <option>Birthday</option>
@@ -266,58 +270,60 @@ function Form({
           </div>
         </div>
 
-        {isCreate && (
-          <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
-            <button
-              onClick={() => {
-                notifyToast("check");
-                setIsCreate(false);
-                setOpenModal(false);
-              }}
-              type="submit"
-              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Save all
-            </button>
-            <button
-              onClick={() => {
-                setIsCreate(false);
-                setOpenModal(false);
-              }}
-              type="submit"
-              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Cancel
-            </button>
-          </div>
-        )}
-        {isEdit && (
-          <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
-            <button
-              onClick={() => {
-                notifyToast("check");
-                setIsEdit(false);
-                setIsDropOpen(false);
-                setOpenModal(false);
-              }}
-              type="submit"
-              class="rounded-lg bg-amber-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Edit
-            </button>
-            <button
-              onClick={() => {
-                setIsEdit(false);
-                setIsDropOpen(false);
-                setOpenModal(false);
-              }}
-              type="submit"
-              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Cancel
-            </button>
-          </div>
-        )}
+        <div className="-mt-5">
+          {isCreate && (
+            <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
+              <button
+                onClick={() => {
+                  notifyToast("check");
+                  setIsCreate(false);
+                  setOpenModal(false);
+                }}
+                type="submit"
+                class="rounded bg-[#54BAB9] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#3cb1af] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => {
+                  setIsCreate(false);
+                  setOpenModal(false);
+                }}
+                type="submit"
+                class="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+          {isEdit && (
+            <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
+              <button
+                onClick={() => {
+                  notifyToast("check");
+                  setIsEdit(false);
+                  setIsDropOpen(false);
+                  setOpenModal(false);
+                }}
+                type="submit"
+                class="rounded bg-[#EDC339] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#ebbe2d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  setIsEdit(false);
+                  setIsDropOpen(false);
+                  setOpenModal(false);
+                }}
+                type="submit"
+                class="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </div>
       </form>
     </div>
   );
