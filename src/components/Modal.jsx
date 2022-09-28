@@ -6,12 +6,13 @@ function Modal({
   setOpenModal,
   isDelete,
   setIsDelete,
+  setIsDropOpen,
   isCreate,
   setIsCreate,
-  setIsDropOpen,
   isEdit,
   setIsEdit,
 }) {
+  console.log(isEdit);
   return (
     <div>
       <div>
@@ -27,6 +28,15 @@ function Modal({
                   setIsCreate={setIsCreate}
                   setOpenModal={setOpenModal}
                   isCreate={isCreate}
+                />
+              )}
+
+              {isEdit && (
+                <Form
+                  setOpenModal={setOpenModal}
+                  setIsEdit={setIsEdit}
+                  isEdit={isEdit}
+                  setIsDropOpen={setIsDropOpen}
                 />
               )}
 

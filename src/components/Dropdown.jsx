@@ -51,7 +51,7 @@ function Dropdown() {
           )}
         </div>
       </span>
-      {showModal && isDelete && (
+      {showModal && (
         <Modal
           setOpenModal={setShowModal}
           isDelete={isDelete}
