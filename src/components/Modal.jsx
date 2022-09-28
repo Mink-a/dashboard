@@ -1,7 +1,17 @@
 import React from "react";
 import Form from "./Form";
+import Delete from "./Delete";
 
-function Modal({ setOpenModal }) {
+function Modal({
+  setOpenModal,
+  isDelete,
+  setIsDelete,
+  isCreate,
+  setIsCreate,
+  setIsDropOpen,
+  isEdit,
+  setIsEdit,
+}) {
   return (
     <div>
       <div>
@@ -12,7 +22,21 @@ function Modal({ setOpenModal }) {
           ></div>
           <div className="relative w-auto my-6 mx-auto max-w-3xl">
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-              <Form setShowForm={setOpenModal} />
+              {isCreate && (
+                <Form
+                  setIsCreate={setIsCreate}
+                  setOpenModal={setOpenModal}
+                  isCreate={isCreate}
+                />
+              )}
+
+              {isDelete && (
+                <Delete
+                  setIsDelete={setIsDelete}
+                  setOpenModal={setOpenModal}
+                  setIsDropOpen={setIsDropOpen}
+                />
+              )}
             </div>
           </div>
         </div>

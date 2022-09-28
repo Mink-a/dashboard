@@ -2,19 +2,23 @@ import React from "react";
 import { BsThreeDotsVertical, BsPencil } from "react-icons/bs";
 import { FiTrash } from "react-icons/fi";
 import { useState } from "react";
+import Modal from "./Modal";
 
 function Dropdown() {
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isDropOpen, setIsDropOpen] = useState(false);
   const handleOpen = () => {
-    setIsOpen((prev) => !prev);
+    setIsDropOpen(!isDropOpen);
   };
   const handleEdit = () => {
-    setIsEdit(setIsEdit(true));
+    setIsEdit(true);
+    setShowModal(true);
   };
   const handleDelete = () => {
-    setIsDelete(setIsDelete(true));
+    setIsDelete(true);
+    setShowModal(true);
   };
   return (
     <div>
@@ -23,7 +27,7 @@ function Dropdown() {
           <label onClick={handleOpen} tabIndex={0} className="relative">
             <BsThreeDotsVertical className="cursor-pointer" />
           </label>
-          {isOpen && (
+          {isDropOpen && (
             <ul
               tabIndex={0}
               className="dropdown-content menu p-2 shadow-lg rounded bg-white rounded-box absolute right-0 top-2 w-32"
@@ -47,6 +51,16 @@ function Dropdown() {
           )}
         </div>
       </span>
+      {showModal && isDelete && (
+        <Modal
+          setOpenModal={setShowModal}
+          isDelete={isDelete}
+          setIsDelete={setIsDelete}
+          isEdit={isEdit}
+          setIsEdit={setIsEdit}
+          setIsDropOpen={setIsDropOpen}
+        />
+      )}
     </div>
   );
 }

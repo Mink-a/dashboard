@@ -1,18 +1,21 @@
 import React from "react";
 
-function Form({ setShowForm }) {
+function Form({ setIsCreate, setOpenModal }) {
   return (
     <div>
       <form
         action="#"
         class="relative rounded-lg bg-white shadow dark:bg-gray-700"
       >
-        <div class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Edit user
+        <div class="flex items-start justify-between rounded-t p-4 dark:border-gray-600">
+          <h3 class="text-xl font-semibold  text-indigo-500 dark:text-white">
+            Add new patient
           </h3>
           <button
-            onClick={() => setShowForm(false)}
+            onClick={() => {
+              setIsCreate(false);
+              setOpenModal(false);
+            }}
             type="button"
             class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
             data-modal-toggle="editUserModal"
@@ -35,146 +38,215 @@ function Form({ setShowForm }) {
         <div class="space-y-6 p-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="first-name"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                First Name
+              <label class="block">
+                <span class="text-gray-700">Full name</span>
+                <input
+                  type="text"
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                  placeholder=""
+                />
               </label>
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="Bonnie"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="last-name"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Last Name
+              <label class="block">
+                <span class="text-gray-700">What type of event is it?</span>
+                <select
+                  class="
+                    block
+                    w-full
+                    mt-1
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                >
+                  <option>Corporate event</option>
+                  <option>Wedding</option>
+                  <option>Birthday</option>
+                  <option>Other</option>
+                </select>
               </label>
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="Green"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="email"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Email
+              <label class="block">
+                <span class="text-gray-700">Full name</span>
+                <input
+                  type="text"
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                  placeholder=""
+                />
               </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="example@company.com"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="phone-number"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Phone Number
+              <label class="block">
+                <span class="text-gray-700">What type of event is it?</span>
+                <select
+                  class="
+                    block
+                    w-full
+                    mt-1
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                >
+                  <option>Corporate event</option>
+                  <option>Wedding</option>
+                  <option>Birthday</option>
+                  <option>Other</option>
+                </select>
               </label>
-              <input
-                type="number"
-                name="phone-number"
-                id="phone-number"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="e.g. +(12)3456 789"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="department"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Department
+              <label class="block">
+                <span class="text-gray-700 block">Full name</span>
+                <div className="flex gap-5 mt-3 text-base px-1">
+                  <div className="">
+                    <input type="radio" name="radio" id="male" class="" />
+                    <label for="male" class="ml-3">
+                      Radio Two
+                    </label>
+                  </div>
+                  <div className="">
+                    <input type="radio" name="radio" id="female" class="" />
+                    <label for="female" class="ml-3">
+                      Radio Two
+                    </label>
+                  </div>
+                </div>
               </label>
-              <input
-                type="text"
-                name="department"
-                id="department"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="Development"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="company"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Company
+              <label class="block">
+                <span class="text-gray-700">When is your event?</span>
+                <input
+                  type="date"
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                />
               </label>
-              <input
-                type="number"
-                name="company"
-                id="company"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="123456"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="current-password"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Current Password
+              <label class="block">
+                <span class="text-gray-700">Full name</span>
+                <input
+                  type="text"
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                  placeholder=""
+                />
               </label>
-              <input
-                type="password"
-                name="current-password"
-                id="current-password"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="••••••••"
-                required=""
-              />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <label
-                for="new-password"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-              >
-                New Password
+              <label class="block">
+                <span class="text-gray-700">Additional details</span>
+                <textarea
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                  rows="3"
+                ></textarea>
               </label>
-              <input
-                type="password"
-                name="new-password"
-                id="new-password"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
-                placeholder="••••••••"
-                required=""
-              />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label class="block">
+                <span class="text-gray-700">What type of event is it?</span>
+                <select
+                  class="
+                    block
+                    w-full
+                    mt-1
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                >
+                  <option>Corporate event</option>
+                  <option>Wedding</option>
+                  <option>Birthday</option>
+                  <option>Other</option>
+                </select>
+              </label>
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label class="block">
+                <span class="text-gray-700">What type of event is it?</span>
+                <select
+                  class="
+                    block
+                    w-full
+                    mt-1
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+                >
+                  <option>Corporate event</option>
+                  <option>Wedding</option>
+                  <option>Birthday</option>
+                  <option>Other</option>
+                </select>
+              </label>
             </div>
           </div>
         </div>
 
-        <div class="flex items-center space-x-2 rounded-b border-t border-gray-200 p-6 dark:border-gray-600">
+        <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
           <button
-            onClick={() => setShowForm(false)}
+            onClick={() => {
+              setIsCreate(false);
+              setOpenModal(false);
+            }}
             type="submit"
             class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Save all
           </button>
           <button
-            onClick={() => setShowForm(false)}
+            onClick={() => {
+              setIsCreate(false);
+              setOpenModal(false);
+            }}
             type="submit"
             class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >

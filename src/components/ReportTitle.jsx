@@ -5,6 +5,7 @@ import Modal from "./Modal";
 
 function ReportTitle() {
   const [showModal, setShowModal] = useState(false);
+  const [isCreate, setIsCreate] = useState(false);
 
   return (
     <div>
@@ -30,7 +31,10 @@ function ReportTitle() {
             <button
               className="py-2 px-4 rounded-2xl inline-flex items-center gap-4 justify-center bg-[#54BAB9] w-full text-white"
               type="button"
-              onClick={() => setShowModal(true)}
+              onClick={() => {
+                setShowModal(true);
+                setIsCreate(true);
+              }}
             >
               <BsPlusLg />
               <span>Add New Patient</span>
@@ -106,7 +110,13 @@ function ReportTitle() {
         </div>
       </div>
       {/* Modal Part */}
-      {showModal && <Modal setOpenModal={setShowModal} />}
+      {showModal && isCreate && (
+        <Modal
+          setOpenModal={setShowModal}
+          isCreate={isCreate}
+          setIsCreate={setIsCreate}
+        />
+      )}
     </div>
   );
 }
