@@ -1,5 +1,5 @@
 import React from "react";
-import notifyToast from './Toast';
+import notifyToast from "./Toast";
 
 function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
   return (
@@ -9,10 +9,10 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
-                <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <div class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600">
+                <div className="mt-3 text-center w-full sm:mt-0 sm:ml-4 sm:text-left">
+                  <div class="flex items-start w-full justify-between rounded-t mb-6 dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      Edit user
+                      Confirmation
                     </h3>
                     <button
                       onClick={() => {
@@ -40,15 +40,13 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                   </div>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Are you sure you want to deactivate your account? All of
-                      your data will be permanently removed. This action cannot
-                      be undone.
+                      Are you sure you want to delete patient?
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+            <div className="px-4 py-3 flex justify-center items-center gap-5 mb-6">
               <button
                 onClick={() => {
                   notifyToast("check");
@@ -57,9 +55,9 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                   setIsDropOpen(false);
                 }}
                 type="button"
-                className="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                className="rounded bg-[#CD211D] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#e2110d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Deactivate
+                Delete
               </button>
               <button
                 onClick={() => {
@@ -68,7 +66,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                   setIsDropOpen(false);
                 }}
                 type="button"
-                className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                className="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Cancel
               </button>
