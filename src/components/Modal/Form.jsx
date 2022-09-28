@@ -312,7 +312,7 @@ function Form({
             <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
               <button
                 onClick={() => {
-                  notifyToast("check");
+                  notifyToast("created");
                   setIsCreate(false);
                   setOpenModal(false);
                 }}
@@ -337,7 +337,7 @@ function Form({
             <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
               <button
                 onClick={() => {
-                  notifyToast("check");
+                  notifyToast("updated");
                   setIsEdit(false);
                   setIsDropOpen(false);
                   setOpenModal(false);

@@ -10,7 +10,7 @@ function Header() {
       <FaBell className="text-2xl" />
       <div className="flex gap-5">
         <img src={Admin} alt="Admin" />
-        <div>
+        <div className="flex flex-col justify-between">
           <h1 className="font-bold font-[Poppins]">Lisa</h1>
           <p className="font-[Poppins]">Operator</p>
         </div>

@@ -46,7 +46,7 @@ function ReportTitle() {
             <div className="w-full">
               <select
                 className="
-              text-center
+              
                     block
                     w-full
                     mt-1
@@ -66,7 +66,7 @@ function ReportTitle() {
             <div className="w-full">
               <select
                 className="
-              text-center
+              
                     block
                     w-full
                     mt-1
@@ -89,7 +89,7 @@ function ReportTitle() {
               <select
                 className="
                 text-[#54BAB9]
-              text-center
+              
                     block
                     mt-1
                     w-full

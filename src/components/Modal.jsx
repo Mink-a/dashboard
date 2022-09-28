@@ -1,6 +1,6 @@
 import React from "react";
-import Form from "./Form";
-import Delete from "./Delete";
+import Form from "./Modal/Form";
+import Delete from "./Modal/Delete";
 
 function Modal({
   setOpenModal,
@@ -12,10 +12,10 @@ function Modal({
   isEdit,
   setIsEdit,
 }) {
-  console.log(isEdit);
+
   return (
     <div>
-      <div>
+      <div className="">
         <div className="flex font-normal justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none backdrop-opacity-10 bg-black/30">
           <div
             className="absolute w-screen h-screen top-0 left-0 bg-black/20"

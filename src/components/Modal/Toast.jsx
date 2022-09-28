@@ -1,19 +1,23 @@
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { BsCheck2Square } from "react-icons/bs";
+import { FaTimes } from "react-icons/fa";
 
 const notifyToast = (message) =>
   toast(
     (t) => (
       <div className="flex gap-3">
-        <div>{message} successfully</div>
-        <button onClick={() => toast.dismiss(t.id)}>X</button>
+        <div>Patient is successfully {message}!</div>
+        <button onClick={() => toast.dismiss(t.id)}>
+          <FaTimes className="ml-auto"/>
+        </button>
       </div>
     ),
     {
-      icon: "X",
+      icon: <BsCheck2Square className="text-2xl"/>,
       id: "id",
       position: "bottom-left",
-      className: "flex bg-green-500 justify-between items-center",
+      className: "flex bg-[#1AB45D] justify-between items-center px-4 py-3 text-base text-white min-w-max",
     }
   );
 

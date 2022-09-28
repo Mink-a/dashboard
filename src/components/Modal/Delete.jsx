@@ -49,7 +49,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
             <div className="px-4 py-3 flex justify-center items-center gap-5 mb-6">
               <button
                 onClick={() => {
-                  notifyToast("check");
+                  notifyToast("deleted");
                   setIsDelete(false);
                   setOpenModal(false);
                   setIsDropOpen(false);

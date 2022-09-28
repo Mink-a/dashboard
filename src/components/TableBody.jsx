@@ -7,8 +7,8 @@ function TableBody() {
   return (
     <div className="">
       <div className="relative">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-[#54BAB9] uppercase border-y-2 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left dark:text-gray-400">
+          <thead className="text-sm text-[#54BAB9] border-y-2 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="p-4">
                 <div className="flex items-center">
@@ -53,7 +53,7 @@ function TableBody() {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 font-semibold">
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 ">
               <td className="p-4 w-4">
                 <div className="flex items-center">
                   <input
