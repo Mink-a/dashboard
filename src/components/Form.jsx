@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import notifyToast from "./Toast";
 
 function Form({
@@ -9,6 +9,18 @@ function Form({
   setIsEdit,
   setIsDropOpen,
 }) {
+  const [formData, setFormData] = useState({
+    petname: "Milo",
+    status: "Food Allergy",
+    pawrent: "The Nu San",
+    breed: "Beagle",
+    gender: "Male",
+    dob: "2021-05-11",
+    contact: "09797122499",
+    address: "တိုက်(၅)၊ အခန်း(၀၀၁)၊ လှိုင်သီရိအိမ်ရာ, Hlaing, Yangon",
+    city: "Yangon",
+    township: "Hlaing",
+  });
   return (
     <div className="py-6 px-7">
       <form
@@ -81,6 +93,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Pet name</span>
                 <input
+                  value={isEdit ? formData.petname : ""}
                   type="text"
                   class="
                     mt-1
@@ -99,6 +112,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Status</span>
                 <select
+                  value={isEdit && formData.status}
                   class="
                     block
                     w-full
@@ -110,7 +124,9 @@ function Form({
                   "
                 >
                   <option>Please choose status</option>
-                  <option>Wedding</option>
+                  <option value={formData.status} selected={isEdit && true}>
+                    Food Allergy
+                  </option>
                   <option>Birthday</option>
                   <option>Other</option>
                 </select>
@@ -120,6 +136,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Pawrent</span>
                 <input
+                  value={isEdit && formData.pawrent}
                   type="text"
                   class="
                     mt-1
@@ -149,7 +166,12 @@ function Form({
                   "
                 >
                   <option>Please choose status</option>
-                  <option>Wedding</option>
+                  <option
+                    value={isEdit && formData.breed}
+                    selected={isEdit && true}
+                  >
+                    Beagle
+                  </option>
                   <option>Birthday</option>
                   <option>Other</option>
                 </select>
@@ -160,7 +182,13 @@ function Form({
                 <span class="text-[#444444] block">Gender</span>
                 <div className="flex gap-5 mt-3 text-base p-1">
                   <div className="">
-                    <input type="radio" name="sex" id="male" class="" />
+                    <input
+                      type="radio"
+                      name="sex"
+                      id="male"
+                      class=""
+                      checked={isEdit && true}
+                    />
                     <label for="male" class="ml-3">
                       Male
                     </label>
@@ -178,6 +206,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Date of Birth</span>
                 <input
+                  value={isEdit && formData.dob}
                   type="date"
                   class="
                     mt-1
@@ -195,6 +224,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Contact Phone No.</span>
                 <input
+                  value={isEdit && formData.contact}
                   type="text"
                   class="
                     mt-1
@@ -213,6 +243,7 @@ function Form({
               <label class="block">
                 <span class="text-[#444444]">Address</span>
                 <textarea
+                  value={isEdit && formData.address}
                   class="
                     mt-1
                     block
@@ -241,7 +272,9 @@ function Form({
                   "
                 >
                   <option>Please choose city</option>
-                  <option>Wedding</option>
+                  <option value={formData.city} selected={isEdit && true}>
+                    Yangon
+                  </option>
                   <option>Birthday</option>
                   <option>Other</option>
                 </select>
@@ -262,7 +295,9 @@ function Form({
                   "
                 >
                   <option>Please choose township</option>
-                  <option>Corporate event</option>
+                  <option value={formData.city} selected={isEdit && true}>
+                    Hlaing
+                  </option>
                   <option>Wedding</option>
                   <option>Birthday</option>
                   <option>Other</option>
@@ -308,9 +343,9 @@ function Form({
                   setOpenModal(false);
                 }}
                 type="submit"
-                class="rounded bg-[#EDC339] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#ebbe2d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="rounded bg-[#EDC339] px-5 text-black py-2.5 w-40 text-center text-sm font-medium hover:bg-[#ebbe2d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Edit
+                Update
               </button>
               <button
                 onClick={() => {
