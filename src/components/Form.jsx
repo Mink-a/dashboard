@@ -1,4 +1,5 @@
 import React from "react";
+import notifyToast from "./Toast";
 
 function Form({
   isCreate,
@@ -269,6 +270,7 @@ function Form({
           <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
             <button
               onClick={() => {
+                notifyToast("check");
                 setIsCreate(false);
                 setOpenModal(false);
               }}
@@ -293,8 +295,9 @@ function Form({
           <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
             <button
               onClick={() => {
+                notifyToast("check");
                 setIsEdit(false);
-                setIsDropOpen(false)
+                setIsDropOpen(false);
                 setOpenModal(false);
               }}
               type="submit"
@@ -305,7 +308,7 @@ function Form({
             <button
               onClick={() => {
                 setIsEdit(false);
-                setIsDropOpen(false)
+                setIsDropOpen(false);
                 setOpenModal(false);
               }}
               type="submit"

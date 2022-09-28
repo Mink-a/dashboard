@@ -1,4 +1,5 @@
 import React from "react";
+import notifyToast from './Toast';
 
 function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
   return (
@@ -50,6 +51,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button
                 onClick={() => {
+                  notifyToast("check");
                   setIsDelete(false);
                   setOpenModal(false);
                   setIsDropOpen(false);
