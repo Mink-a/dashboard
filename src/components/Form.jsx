@@ -265,28 +265,56 @@ function Form({
           </div>
         </div>
 
-        <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
-          <button
-            onClick={() => {
-              setIsCreate(false);
-              setOpenModal(false);
-            }}
-            type="submit"
-            class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Save all
-          </button>
-          <button
-            onClick={() => {
-              setIsCreate(false);
-              setOpenModal(false);
-            }}
-            type="submit"
-            class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Cancel
-          </button>
-        </div>
+        {isCreate && (
+          <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
+            <button
+              onClick={() => {
+                setIsCreate(false);
+                setOpenModal(false);
+              }}
+              type="submit"
+              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Save all
+            </button>
+            <button
+              onClick={() => {
+                setIsCreate(false);
+                setOpenModal(false);
+              }}
+              type="submit"
+              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Cancel
+            </button>
+          </div>
+        )}
+        {isEdit && (
+          <div class="flex items-center space-x-2 rounded-b justify-center  border-gray-200 p-6 ">
+            <button
+              onClick={() => {
+                setIsEdit(false);
+                setIsDropOpen(false)
+                setOpenModal(false);
+              }}
+              type="submit"
+              class="rounded-lg bg-amber-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
+                setIsEdit(false);
+                setIsDropOpen(false)
+                setOpenModal(false);
+              }}
+              type="submit"
+              class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Cancel
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );
