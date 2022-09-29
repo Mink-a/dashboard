@@ -23,7 +23,10 @@ function Form({
   });
   return (
     <div className="">
-      <form action="#" className="relative w-full rounded-lg bg-white py-6 px-7">
+      <form
+        action="#"
+        className="relative w-full rounded-lg bg-white py-6 px-7"
+      >
         <div className="absolute top-5 right-6">
           {isEdit && (
             <button
@@ -88,7 +91,7 @@ function Form({
               <label className="block">
                 <span className="text-[#444444]">Pet name</span>
                 <input
-                  value={isEdit ? formData.petname : ""}
+                  value={isEdit && formData.petname}
                   type="text"
                   className="
                     mt-1
