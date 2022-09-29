@@ -9,9 +9,9 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
-                <div className="mt-3 text-center w-full sm:mt-0 sm:ml-4 sm:text-left">
-                  <div class="flex items-start w-full justify-between rounded-t mb-6 dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <div class="mb-6 flex w-full items-start justify-between rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 ">
                       Confirmation
                     </h3>
                     <button
@@ -21,7 +21,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                         setIsDropOpen(false);
                       }}
                       type="button"
-                      class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                      class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
                       data-modal-toggle="editUserModal"
                     >
                       <svg
@@ -46,7 +46,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                 </div>
               </div>
             </div>
-            <div className="px-4 py-3 flex justify-center items-center gap-5 mb-6">
+            <div className="mb-6 flex items-center justify-center gap-5 px-4 py-3">
               <button
                 onClick={() => {
                   notifyToast("deleted");
@@ -55,7 +55,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                   setIsDropOpen(false);
                 }}
                 type="button"
-                className="rounded bg-[#CD211D] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#e2110d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="w-40 rounded bg-[#CD211D] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#e2110d] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Delete
               </button>
@@ -66,7 +66,7 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                   setIsDropOpen(false);
                 }}
                 type="button"
-                className="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="w-40 rounded border border-[#ACB3C0] px-5 py-2.5 text-center text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Cancel
               </button>

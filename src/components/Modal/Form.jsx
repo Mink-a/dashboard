@@ -25,7 +25,7 @@ function Form({
     <div className="py-6 px-7">
       <form
         action="#"
-        class="relative w-full rounded-lg bg-white dark:bg-gray-700"
+        class="relative w-full rounded-lg bg-white "
       >
         <div className="absolute top-1 right-6">
           {isEdit && (
@@ -36,7 +36,7 @@ function Form({
                 setOpenModal(false);
               }}
               type="button"
-              class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
               data-modal-toggle="editUserModal"
             >
               <svg
@@ -60,7 +60,7 @@ function Form({
                 setOpenModal(false);
               }}
               type="button"
-              class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
               data-modal-toggle="editUserModal"
             >
               <svg
@@ -78,8 +78,8 @@ function Form({
             </button>
           )}
         </div>
-        <div class="text-center text-base rounded-t p-4 dark:border-gray-600">
-          <h3 class="text-xl font-[500] mb-2 text-[#54BAB9] dark:text-white">
+        <div class="rounded-t p-4 text-center text-base dark:border-gray-600">
+          <h3 class="mb-2 text-xl font-[500] text-[#54BAB9] ">
             {isCreate ? "Add new" : "Update"} patient
           </h3>
           <p className="text-[#444444]">
@@ -87,8 +87,8 @@ function Form({
           </p>
         </div>
 
-        <div class="space-y-6 p-6 w-full">
-          <div class="grid grid-cols-6 w-full gap-6">
+        <div class="w-full space-y-6 p-6">
+          <div class="grid w-full grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
                 <span class="text-[#444444]">Pet name</span>
@@ -114,9 +114,9 @@ function Form({
                 <select
                   value={isEdit && formData.status}
                   class="
+                    mt-1
                     block
                     w-full
-                    mt-1
                     rounded-md
                     border-[#54BAB9]
                     shadow-sm
@@ -156,9 +156,9 @@ function Form({
                 <span class="text-[#444444]">Breed</span>
                 <select
                   class="
+                    mt-1
                     block
                     w-full
-                    mt-1
                     rounded-md
                     border-[#54BAB9]
                     shadow-sm
@@ -179,8 +179,8 @@ function Form({
             </div>
             <div class="col-span-6 sm:col-span-3">
               <label class="block">
-                <span class="text-[#444444] block">Gender</span>
-                <div className="flex gap-5 mt-3 text-base p-1">
+                <span class="block text-[#444444]">Gender</span>
+                <div className="mt-3 flex gap-5 p-1 text-base">
                   <div className="">
                     <input
                       type="radio"
@@ -262,9 +262,9 @@ function Form({
                 <span class="text-[#444444]">City</span>
                 <select
                   class="
+                    mt-1
                     block
                     w-full
-                    mt-1
                     rounded-md
                     border-[#54BAB9]
                     shadow-sm
@@ -285,9 +285,9 @@ function Form({
                 <span class="text-[#444444]">Township</span>
                 <select
                   class="
+                    mt-1
                     block
                     w-full
-                    mt-1
                     rounded-md
                     border-[#54BAB9]
                     shadow-sm
@@ -309,7 +309,7 @@ function Form({
 
         <div className="-mt-5">
           {isCreate && (
-            <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
+            <div class="flex items-center justify-center space-x-2 rounded-b  p-6 ">
               <button
                 onClick={() => {
                   notifyToast("created");
@@ -317,7 +317,7 @@ function Form({
                   setOpenModal(false);
                 }}
                 type="submit"
-                class="rounded bg-[#54BAB9] px-5 py-2.5 w-40 text-center text-sm font-medium text-white hover:bg-[#3cb1af] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="w-40 rounded bg-[#54BAB9] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#3cb1af] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Save
               </button>
@@ -327,14 +327,14 @@ function Form({
                   setOpenModal(false);
                 }}
                 type="submit"
-                class="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="w-40 rounded border border-[#ACB3C0] px-5 py-2.5 text-center text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Cancel
               </button>
             </div>
           )}
           {isEdit && (
-            <div class="flex items-center space-x-2 rounded-b justify-center  p-6 ">
+            <div class="flex items-center justify-center space-x-2 rounded-b  p-6 ">
               <button
                 onClick={() => {
                   notifyToast("updated");
@@ -343,7 +343,7 @@ function Form({
                   setOpenModal(false);
                 }}
                 type="submit"
-                class="rounded bg-[#EDC339] px-5 text-black py-2.5 w-40 text-center text-sm font-medium hover:bg-[#ebbe2d] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="w-40 rounded bg-[#EDC339] px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-[#ebbe2d] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Update
               </button>
@@ -354,7 +354,7 @@ function Form({
                   setOpenModal(false);
                 }}
                 type="submit"
-                class="rounded px-5 py-2.5 text-center border w-40 border-[#ACB3C0] text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="w-40 rounded border border-[#ACB3C0] px-5 py-2.5 text-center text-sm font-medium hover:bg-[#f9f9fa] focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 Cancel
               </button>
