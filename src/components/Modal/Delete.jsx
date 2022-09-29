@@ -10,8 +10,8 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
                 <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <div class="mb-6 flex w-full items-start justify-between rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 ">
+                  <div className="mb-6 flex w-full items-start justify-between rounded-t dark:border-gray-600">
+                    <h3 className="text-xl font-semibold text-gray-900 ">
                       Confirmation
                     </h3>
                     <button
@@ -21,19 +21,18 @@ function Delete({ setIsDelete, setOpenModal, setIsDropOpen }) {
                         setIsDropOpen(false);
                       }}
                       type="button"
-                      class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
-                      data-modal-toggle="editUserModal"
+                      className="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
                     >
                       <svg
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     </button>
