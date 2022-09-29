@@ -22,12 +22,9 @@ function Form({
     township: "Hlaing",
   });
   return (
-    <div className="py-6 px-7">
-      <form
-        action="#"
-        className="relative w-full rounded-lg bg-white "
-      >
-        <div className="absolute top-1 right-6">
+    <div className="">
+      <form action="#" className="relative w-full rounded-lg bg-white py-6 px-7">
+        <div className="absolute top-5 right-6">
           {isEdit && (
             <button
               onClick={() => {
@@ -37,7 +34,6 @@ function Form({
               }}
               type="button"
               className="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
-              
             >
               <svg
                 className="h-5 w-5"
@@ -61,7 +57,6 @@ function Form({
               }}
               type="button"
               className="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 "
-              
             >
               <svg
                 className="h-5 w-5"
@@ -189,13 +184,13 @@ function Form({
                       className=""
                       checked={isEdit && true}
                     />
-                    <label for="male" className="ml-3">
+                    <label htmlFor="male" className="ml-3">
                       Male
                     </label>
                   </div>
                   <div className="">
                     <input type="radio" name="sex" id="female" className="" />
-                    <label for="female" className="ml-3">
+                    <label htmlFor="female" className="ml-3">
                       Female
                     </label>
                   </div>

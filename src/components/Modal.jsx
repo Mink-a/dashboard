@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./Modal/Form";
 import Delete from "./Modal/Delete";
+import { motion } from "framer-motion";
 
 function Modal({
   setOpenModal,
@@ -12,17 +13,23 @@ function Modal({
   isEdit,
   setIsEdit,
 }) {
-
   return (
     <div>
       <div className="">
-        <div className="flex font-normal justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none backdrop-opacity-10 bg-black/30">
-          {/* <div
-            className="absolute w-screen h-screen top-0 left-0 bg-black/20"
-            onClick={() => setOpenModal(false)}
-          ></div> */}
-          <div className="relative w-auto my-6 mx-auto max-w-3xl">
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden  font-normal outline-none focus:outline-none">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="absolute top-0 left-0  h-screen w-screen bg-black/50"></div>
+          </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative flex w-full max-w-3xl flex-col rounded-lg border-0  outline-none focus:outline-none"
+            >
               {isCreate && (
                 <Form
                   setIsCreate={setIsCreate}
@@ -47,8 +54,7 @@ function Modal({
                   setIsDropOpen={setIsDropOpen}
                 />
               )}
-            </div>
-          </div>
+            </motion.div>
         </div>
       </div>
     </div>

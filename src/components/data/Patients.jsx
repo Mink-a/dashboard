@@ -1,9 +1,9 @@
 import { patientInfo } from "./data";
 import Dropdown from "../Dropdown";
 
-export const patients = patientInfo.map((row) => {
+export const patients = patientInfo.map((row, i) => {
   return (
-    <tr className="border-b bg-white hover:bg-gray-50 ">
+    <tr key={i} className="border-b bg-white hover:bg-gray-50 ">
       <td className="w-4 p-4">
         <div className="flex items-center">
           <input

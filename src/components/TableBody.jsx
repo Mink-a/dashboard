@@ -4,7 +4,7 @@ import { patients } from "./data/Patients";
 function TableBody() {
   return (
     <div className="">
-      <div className="relative">
+      <div className="">
         <table className="w-full text-left text-sm ">
           <thead className="border-y-2 bg-gray-50 text-sm text-[#54BAB9] ">
             <tr>
