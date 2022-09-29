@@ -9,15 +9,26 @@ const notifyToast = (message) =>
       <div className="flex gap-3">
         <div>Patient is successfully {message}!</div>
         <button onClick={() => toast.dismiss(t.id)}>
-          <FaTimes className="ml-auto"/>
+          <FaTimes className="ml-auto" />
         </button>
       </div>
     ),
     {
-      icon: <BsCheck2Square className="text-2xl"/>,
+      icon: <BsCheck2Square className="text-2xl" />,
       id: "id",
       position: "bottom-left",
-      className: "flex bg-[#1AB45D] justify-between items-center px-4 py-3 text-base text-white min-w-max",
+      // className:
+      //   "flex bg-[#1AB45D] justify-between items-center px-4 py-3 text-base text-white min-w-max",
+      style: {
+        background: "#1AB45D",
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center",
+        fontSize: "14px",
+        color:"white",
+        minWidth:"max-content",
+        padding:"12px 14px 12px 14px"
+      },
     }
   );
 
